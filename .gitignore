@@ -1,3 +1,5 @@
+public/packages/*
+public/stylesheets/*
 # Logs
 logs
 *.log

@@ -1,0 +1,29 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+<h1>{{ title }}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="grid-container">
+<div class="grid-x">
+<div class="cell">
+<h1>{{ title }}</h1>
+</div>
+</div>
+<div class="grid-x">
+<div class="cell small-6">
+<h3>test left</h3>
+</div>
+<div class="cell small-6">
+<h3>test right</h3>
+</div>
+</div>
+
+<ul>
+  {% for name, item in items %}
+  <li>{{ name }}: {{ item }}</li>
+  {% endfor %}
+</ul>
+</div>
+{% endblock %}

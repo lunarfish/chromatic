@@ -1,0 +1,14 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+<h1>{{ title }}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="grid-x">
+<div class="cell large-9 medium-8 small-12">
+<div id="map-container"></div>
+</div>
+</div>
+<script src="assets/javascripts/maploader.js"></script>
+{% endblock %}

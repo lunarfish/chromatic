@@ -1,0 +1,52 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+<h1>{{ title }}</h1>
+{% endblock %}
+{% block content %}
+<h2>Vibrancy: high</h2>
+{% for tone in tones %}
+{% if tone.vibrancy >= 60 %}
+<div style="display:inline-block;
+			margin:0.25em; 
+			width:3em; 
+			height:3em; 
+			line-height:3em;
+			text-align:center; 
+			background-color: {{tone.background}}; 
+			color: {{tone.foreground}}">
+	{{ tone.vibrancy }}
+</div>
+{% endif %}
+{% endfor %}
+<h2>Vibrancy: mid</h2>
+{% for tone in tones %}
+{% if (tone.vibrancy < 60 and tone.vibrancy > 20) %}
+<div style="display:inline-block;
+			margin:0.25em; 
+			width:3em; 
+			height:3em; 
+			line-height:3em;
+			text-align:center; 
+			background-color: {{tone.background}}; 
+			color: {{tone.foreground}}">
+	{{ tone.vibrancy }}
+</div>
+{% endif %}
+{% endfor %}
+<h2>Vibrancy: low</h2>
+{% for tone in tones %}
+{% if tone.vibrancy <= 20 %}
+<div style="display:inline-block;
+			margin:0.25em; 
+			width:3em; 
+			height:3em; 
+			line-height:3em;
+			text-align:center; 
+			background-color: {{tone.background}}; 
+			color: {{tone.foreground}}">
+	{{ tone.vibrancy }}
+</div>
+{% endif %}
+{% endfor %}
+{% endblock %}
